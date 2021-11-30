@@ -1,4 +1,4 @@
-use birds;
+use('birds');
 db.dropDatabase();
 
 db.sightings.insertMany([

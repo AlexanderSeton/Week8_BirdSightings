@@ -2,7 +2,7 @@ import {useState} from "react";
 import { postSighting } from "./SightingService";
 
 const SightingsForm = ({addSighting}) => {
-    
+
     const [formData, setFormData] = useState({})
 
     const onChange = (e) =>{
@@ -15,6 +15,7 @@ const SightingsForm = ({addSighting}) => {
         postSighting(formData).then((data)=>{
             addSighting(data);
         })
+        e.target.reset();
     }
 
     return (
